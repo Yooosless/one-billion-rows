@@ -1,4 +1,6 @@
 calculate/target/
 generate-data/target/
-
+calculate/Cargo.lock
+generate-data/Cargo.lock
 data/
+
