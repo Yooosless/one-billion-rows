@@ -1,0 +1,11 @@
+[package]
+name = "calculate"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+crossbeam = "0.8"
+
+[[bin]]
+name = "calculate"
+path = "src/calculate.rs"

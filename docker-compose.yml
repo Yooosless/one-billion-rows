@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  generate_data:
+    build:
+      context: ./generate-data
+    container_name: generate_data
+    volumes:
+      - shared_data:/app/data 
+
+  calculate:
+    build:
+      context: ./calculate
+    container_name: calculate
+    restart: always
+
+    depends_on:
+      - generate_data 
+    volumes:
+      - shared_data:/app/data 
+
+volumes:
+  shared_data:
